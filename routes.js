@@ -1,6 +1,41 @@
 var express = require('express');
+var passport = require('passport'); 
+var TwitterStrategy = require('passport-twitter').Strategy;
 var router = express.Router();
 
+var TWITTER_CONSUMER_KEY = "5UmZt3Xd8cRC3LtQy8EyKqiBH";
+var TWITTER_CONSUMER_SECRET = "3McYqRb1oOarlfy5ZkvYyNGDmqI25xFcy9muQ4YcewFNjeS1r9";
+
+passport.serializeUser(function(user, done) {
+  console.log(user);
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done){
+  console.log(user);
+  done(null, user);
+});
+
+passport.use(new TwitterStrategy({
+    consumerKey: TWITTER_CONSUMER_KEY,
+    consumerSecret: TWITTER_CONSUMER_SECRET,
+    callbackURL: "http://localhost:3000/auth/twitter/callback"
+  },
+  function(token, tokenSecret, profile, done) {
+    process.nextTick(function(){
+      return done(null, profile);
+    });
+  }
+));
+
+router.get('/auth/twitter', passport.authenticate('twitter'), function(req, res){
+
+});
+
+router.get('/auth/twitter/callback', passport.authenticate('twitter', {failureRedirect: '/login'}), function(req, res){
+  console.log('logged in!');
+  res.redirect('/');
+});
 router.get('/', function(req, res) {
   return res.render('index', {
     title: 'Codeweekend Notes',
@@ -35,5 +70,6 @@ router.post('/create', function(req, res) {
   req.session.message = 'Note created!';
   return res.redirect('/');
 });
+
 
 module.exports = router;

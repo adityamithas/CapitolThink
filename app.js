@@ -7,6 +7,7 @@ var session = require('cookie-session');
 var request = require('request');
 var app = express();
 var readline = require('readline');
+var passport = require('passport');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
@@ -16,6 +17,8 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(session({secret: 'capitoltrends'}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Our own middleware which runs for every request
@@ -190,13 +193,13 @@ rl.question("What hashtag do you want to analyze? Enter without #: ", function(t
 
 //make requests to ritetag API
 var request_ritetag_influ = request(ritetag_influ, function(err, response_from_rt, body) {
-  console.log(response_from_rt);
+  console.log('yes');
 });
 var request_ritetag_mentionw = request(ritetag_mentionw, function(err, response_from_rt, body) {
-  console.log(response_from_rt);
+  console.log('yes');
 });
 var request_ritetag_hist = request(ritetag_hist, function(err, response_from_rt, body) {
-  console.log(response_from_rt);
+  console.log('yes');
 });
 
 
