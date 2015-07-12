@@ -68,10 +68,7 @@ var capitol_apikey = "8d2bd994d52a4e39af37a578f73ebf53";
    the Magic API to scrape the bioguide URL for (name won't work).
    We will then have to parse the json returned by Magic API to match it to whatever name the user entered to analyse the speech of that particular*
    congressman. */
-var magic_endpoint = "
-https://api.import.io/store/data/2ac53a11-caea-4dca-b4b6-98bdf949fbc4/_query?input/webpage/url=https%3A%2F%2Fwww.congress.gov%2Fhelp%2Ffield-values%2Fmember-bi
-oguide-ids%3Floclr%3Dbloglaw&_user=fe244908-c429-4f7c-82eb-fda5136828d4&_apikey=fe244908-c429-4f7c-82eb-fda5136828d4%3ATr7kz%2FA%2FvcOXDJSIUuYigxI37BbVPBgN%2Fr
-OMjNN%2B5LTrTnH1N884x8fjPmBvGXJ5KAKBC3kh03%2FivsHqtW4PhA%3D%3D";
+var magic_endpoint = "https://api.import.io/store/data/2ac53a11-caea-4dca-b4b6-98bdf949fbc4/_query?input/webpage/url=https%3A%2F%2Fwww.congress.gov%2Fhelp%2Ffield-values%2Fmember-bioguide-ids%3Floclr%3Dbloglaw&_user=fe244908-c429-4f7c-82eb-fda5136828d4&_apikey=fe244908-c429-4f7c-82eb-fda5136828d4%3ATr7kz%2FA%2FvcOXDJSIUuYigxI37BbVPBgN%2FrOMjNN%2B5LTrTnH1N884x8fjPmBvGXJ5KAKBC3kh03%2FivsHqtW4PhA%3D%3D";
 
 /* scraping a URL for each congressman's bioguide id */
 // var request_scraper = http.get(magic_endpoint, function(response_from_magic) {
@@ -142,7 +139,7 @@ var twitter_post = "https://api.twitter.com/1.1/statuses/update.json";
 
 var rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout  
 });
 
 rl.question("Tell the world: ", function(answer) {
@@ -152,8 +149,10 @@ rl.question("Tell the world: ", function(answer) {
   //how do i actually post the tweet from here?  at this point the request url has the status appended to the end
   //see the screenshot in email.. apparently the cURL command will post the tweet but idk what to do lols
   //here's what i tried oops
-  var request_twitter = request(twitter_post, function(err, response_from_twitter, body);
-  rl.close();
+  var request_twitter = request(twitter_post, function(err, response_from_twitter, body) {
+    rl.close();
+  });
+  
 });
 
 //beginning of every RiteTag API call
@@ -178,7 +177,7 @@ var ritetag_mentionw = ritetag_endpoint;
 ritetag_mentionw += mentioned_with;
 
 //after adding fxn name, add the hashtag, followed by the end which contains consumer key and oauth stuff
-rl.question("What hashtag do you want to analyze? Enter without #: ", function(tags)) {
+rl.question("What hashtag do you want to analyze? Enter without #: ", function(tags) {
 	ritetag_influ += tags;
 	ritetag_influ += ritetag_endpoint;
 	
@@ -187,12 +186,18 @@ rl.question("What hashtag do you want to analyze? Enter without #: ", function(t
 	
 	ritetag_mentionw += tags;
 	ritetag_mentionw += ritetag_endpoint;
-}
+});
 
 //make requests to ritetag API
-var request_ritetag_influ = request(ritetag_influ, function(err, response_from_rt, body);
-var request_ritetag_mentionw = request(ritetag_mentionw, function(err, response_from_rt, body);
-var request_ritetag_hist = request(ritetag_hist, function(err, response_from_rt, body);
+var request_ritetag_influ = request(ritetag_influ, function(err, response_from_rt, body) {
+  console.log(response_from_rt);
+});
+var request_ritetag_mentionw = request(ritetag_mentionw, function(err, response_from_rt, body) {
+  console.log(response_from_rt);
+});
+var request_ritetag_hist = request(ritetag_hist, function(err, response_from_rt, body) {
+  console.log(response_from_rt);
+});
 
 
 
