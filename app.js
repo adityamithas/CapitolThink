@@ -66,7 +66,6 @@ var state;
 var	capitol_endpoint = "http://capitolwords.org/api/1";
 var capitol_apikey = "8d2bd994d52a4e39af37a578f73ebf53";
 
-/* i can't tell whether this will return a query (don't even know what that is) or a json...) we prob want to be able to parse a json" */
 /* the reason we are doing this is because the Capitol Words API requires the politicians bioguide ID, which I am using
    the Magic API to scrape the bioguide URL for (name won't work).
    We will then have to parse the json returned by Magic API to match it to whatever name the user entered to analyse the speech of that particular*
@@ -133,10 +132,6 @@ app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-// code added on 6 July 2015 - 9 July 2015
-
-// I have no idea what to do with OAuth stuff for twitter; see the screenshots and links I sent you in the email for info that might be useful!
-// TODO: find a way to let users give us permission to let them tweet directly from our app.
 var twitter_login = "https://api.twitter.com/oauth/authorize?oauth_token=Z6eEdO8MOmk394WozF5oKyuAv855l4Mlqo7hhlSLik";
 var twitter_post = "https://api.twitter.com/1.1/statuses/update.json";
 
@@ -149,9 +144,6 @@ rl.question("Tell the world: ", function(answer) {
   twitter_post += "status=";
   twitter_post += answer;
 
-  //how do i actually post the tweet from here?  at this point the request url has the status appended to the end
-  //see the screenshot in email.. apparently the cURL command will post the tweet but idk what to do lols
-  //here's what i tried oops
   var request_twitter = request(twitter_post, function(err, response_from_twitter, body) {
     rl.close();
   });
