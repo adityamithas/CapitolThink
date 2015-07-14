@@ -38,7 +38,7 @@ router.get('/auth/twitter/callback', passport.authenticate('twitter', {failureRe
 });
 router.get('/', function(req, res) {
   return res.render('index', {
-    title: 'Codeweekend Notes',
+    title: 'Placeholder
     notes: req.session.notes
   });
 });
