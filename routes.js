@@ -69,7 +69,11 @@ router.post('/create', function(req, res) {
 
   req.session.message = 'Note created!';
   return res.redirect('/');
-});
+
+var app = express.createServer();
+app.get('/index', function(req, res){
+ res.sendfile(__dirname + '/views/index.html');
+}); 
 
 
 module.exports = router;
