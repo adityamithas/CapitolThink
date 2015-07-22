@@ -21,9 +21,22 @@
     </ul>
     <p>Make a new note:</p>
     <form action='/create' method='post'>
-      <input type='text' name='title' placeholder='Title'><br/>
+      <input class="awesomplete" type='text' name='title' placeholder='Title' list="mylist"><br/>
+      <datalist id="mylist">
+        <option>Add option</option>
+        <option>Java</option>
+        <option>JavaScript</option>
+        <option>Brainfuck</option>
+        <option>LOLCODE</option>
+        <option>Node.js</option>
+        <option>Ruby on Rails</option>
+        </datalist>
       <textarea name='body' rows='8' cols='80' placeholder='Body'></textarea><br/>
       <input type='submit' value='Save Note'>
     </form>
+<link type="text/css" rel="stylesheet" hr­ef="autocomplete.css"/>
+<script sr­c="jquery.min.js"></script>
+<scri­pt sr­c="autocomplete.js"></script>
+
   </body>
 </html>
