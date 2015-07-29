@@ -1,16 +1,12 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   'passport-twtter',
-1 verbose cli   '--save' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'request', '--save' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.37
+3 info using node@v0.10.40
 4 verbose node symlink /usr/bin/node
 5 warn package.json readline@0.0.8 readline is also the name of a node core module.
 6 verbose readDependencies using package.json deps
-7 verbose cache add [ 'passport-twtter', null ]
-8 verbose cache add name=undefined spec="passport-twtter" args=["passport-twtter",null]
+7 verbose cache add [ 'request@2.42.0', null ]
+8 verbose cache add name=undefined spec="request@2.42.0" args=["request@2.42.0",null]
 9 verbose parsed url { protocol: null,
 9 verbose parsed url   slashes: null,
 9 verbose parsed url   auth: null,
@@ -20,69 +16,76 @@
 9 verbose parsed url   hash: null,
 9 verbose parsed url   search: null,
 9 verbose parsed url   query: null,
-9 verbose parsed url   pathname: 'passport-twtter',
-9 verbose parsed url   path: 'passport-twtter',
-9 verbose parsed url   href: 'passport-twtter' }
-10 silly lockFile df018ff1-passport-twtter passport-twtter
-11 verbose lock passport-twtter /home/mingbo/.npm/df018ff1-passport-twtter.lock
-12 silly lockFile df018ff1-passport-twtter passport-twtter
-13 silly lockFile df018ff1-passport-twtter passport-twtter
-14 verbose addNamed [ 'passport-twtter', '' ]
-15 verbose addNamed [ null, '*' ]
-16 silly lockFile e6e86b8f-passport-twtter passport-twtter@
-17 verbose lock passport-twtter@ /home/mingbo/.npm/e6e86b8f-passport-twtter.lock
-18 silly addNameRange { name: 'passport-twtter', range: '*', hasData: false }
-19 verbose request where is /passport-twtter
-20 verbose request registry https://registry.npmjs.org/
-21 verbose request id 6e4175badb4c926e
-22 verbose url raw /passport-twtter
-23 verbose url resolving [ 'https://registry.npmjs.org/', './passport-twtter' ]
-24 verbose url resolved https://registry.npmjs.org/passport-twtter
-25 verbose request where is https://registry.npmjs.org/passport-twtter
-26 info trying registry request attempt 1 at 12:36:04
-27 http GET https://registry.npmjs.org/passport-twtter
-28 http 404 https://registry.npmjs.org/passport-twtter
-29 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-29 verbose headers   'content-type': 'application/json',
-29 verbose headers   'cache-control': 'max-age=0',
-29 verbose headers   'content-length': '51',
-29 verbose headers   'accept-ranges': 'bytes',
-29 verbose headers   date: 'Sun, 12 Jul 2015 19:36:04 GMT',
-29 verbose headers   via: '1.1 varnish',
-29 verbose headers   age: '0',
-29 verbose headers   connection: 'keep-alive',
-29 verbose headers   'x-served-by': 'cache-lax1434-LAX',
-29 verbose headers   'x-cache': 'MISS',
-29 verbose headers   'x-cache-hits': '0',
-29 verbose headers   'x-timer': 'S1436729764.794840,VS0,VE47' }
-30 silly registry.get cb [ 404,
-30 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-30 silly registry.get     'content-type': 'application/json',
-30 silly registry.get     'cache-control': 'max-age=0',
-30 silly registry.get     'content-length': '51',
-30 silly registry.get     'accept-ranges': 'bytes',
-30 silly registry.get     date: 'Sun, 12 Jul 2015 19:36:04 GMT',
-30 silly registry.get     via: '1.1 varnish',
-30 silly registry.get     age: '0',
-30 silly registry.get     connection: 'keep-alive',
-30 silly registry.get     'x-served-by': 'cache-lax1434-LAX',
-30 silly registry.get     'x-cache': 'MISS',
-30 silly registry.get     'x-cache-hits': '0',
-30 silly registry.get     'x-timer': 'S1436729764.794840,VS0,VE47' } ]
-31 silly lockFile e6e86b8f-passport-twtter passport-twtter@
-32 silly lockFile e6e86b8f-passport-twtter passport-twtter@
-33 error 404 404 Not Found: passport-twtter
-33 error 404
-33 error 404 'passport-twtter' is not in the npm registry.
-33 error 404 You should bug the author to publish it
-33 error 404 It was specified as a dependency of 'capitoltrends'
-33 error 404
-33 error 404 Note that you can also install from a
-33 error 404 tarball, folder, or http url, or git url.
-34 error System Linux 3.16.0-43-generic
-35 error command "/usr/bin/node" "/usr/bin/npm" "install" "passport-twtter" "--save"
-36 error cwd /home/mingbo/Documents/CapitolThink
-37 error node -v v0.10.37
-38 error npm -v 1.4.28
-39 error code E404
-40 verbose exit [ 1, true ]
+9 verbose parsed url   pathname: 'request@2.42.0',
+9 verbose parsed url   path: 'request@2.42.0',
+9 verbose parsed url   href: 'request@2.42.0' }
+10 verbose cache add name="request" spec="2.42.0" args=["request","2.42.0"]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: '2.42.0',
+11 verbose parsed url   path: '2.42.0',
+11 verbose parsed url   href: '2.42.0' }
+12 verbose addNamed [ 'request', '2.42.0' ]
+13 verbose addNamed [ '2.42.0', '2.42.0' ]
+14 silly lockFile 6619e4b4-request-2-42-0 request@2.42.0
+15 verbose lock request@2.42.0 /home/mingbo/.npm/6619e4b4-request-2-42-0.lock
+16 verbose request where is /request
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 8fba2fffaa583e18
+19 verbose url raw /request
+20 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+21 verbose url resolved https://registry.npmjs.org/request
+22 verbose request where is https://registry.npmjs.org/request
+23 info trying registry request attempt 1 at 09:51:42
+24 verbose etag "8E2TDXXN4ITKGCA1MIU37V9IS"
+25 http GET https://registry.npmjs.org/request
+26 http 304 https://registry.npmjs.org/request
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Wed, 29 Jul 2015 13:51:42 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"8E2TDXXN4ITKGCA1MIU37V9IS"',
+27 silly registry.get     age: '23',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-jfk1026-JFK',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '4',
+27 silly registry.get     'x-timer': 'S1438177902.723197,VS0,VE0',
+27 silly registry.get     vary: 'Accept' } ]
+28 verbose etag https://registry.npmjs.org/request from cache
+29 silly lockFile 5b57d78a-s-org-request-request-2-42-0-tgz https://registry.npmjs.org/request/-/request-2.42.0.tgz
+30 verbose lock https://registry.npmjs.org/request/-/request-2.42.0.tgz /home/mingbo/.npm/5b57d78a-s-org-request-request-2-42-0-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.42.0.tgz',
+31 verbose addRemoteTarball   '572bd0148938564040ac7ab148b96423a063304a' ]
+32 info retry fetch attempt 1 at 09:51:42
+33 verbose fetch to= /tmp/npm-4953-KvjWLsxb/registry.npmjs.org/request/-/request-2.42.0.tgz
+34 http GET https://registry.npmjs.org/request/-/request-2.42.0.tgz
+35 http 200 https://registry.npmjs.org/request/-/request-2.42.0.tgz
+36 silly lockFile 5b57d78a-s-org-request-request-2-42-0-tgz https://registry.npmjs.org/request/-/request-2.42.0.tgz
+37 silly lockFile 5b57d78a-s-org-request-request-2-42-0-tgz https://registry.npmjs.org/request/-/request-2.42.0.tgz
+38 silly lockFile 6619e4b4-request-2-42-0 request@2.42.0
+39 silly lockFile 6619e4b4-request-2-42-0 request@2.42.0
+40 error Error: EACCES, mkdir '/home/mingbo/.npm/request/2.42.0'
+40 error  { [Error: EACCES, mkdir '/home/mingbo/.npm/request/2.42.0']
+40 error   errno: 3,
+40 error   code: 'EACCES',
+40 error   path: '/home/mingbo/.npm/request/2.42.0',
+40 error   parent: 'capitoltrends' }
+41 error Please try running this command again as root/Administrator.
+42 error System Linux 3.16.0-44-generic
+43 error command "/usr/bin/node" "/usr/bin/npm" "install" "request" "--save"
+44 error cwd /home/mingbo/Documents/CapitolThink
+45 error node -v v0.10.40
+46 error npm -v 1.4.28
+47 error path /home/mingbo/.npm/request/2.42.0
+48 error code EACCES
+49 error errno 3
+50 error stack Error: EACCES, mkdir '/home/mingbo/.npm/request/2.42.0'
+51 verbose exit [ 3, true ]

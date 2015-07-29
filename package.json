@@ -13,6 +13,6 @@
     "passport": "^0.2.2",
     "passport-twitter": "^1.0.3",
     "readline": "0.0.8",
-    "request": "2.42.0"
+    "request": "^2.42.0"
   }
 }
